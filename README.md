@@ -2,7 +2,7 @@
 
 A responsive weather application built with **React**, **Node.js**, and **Express** that fetches real-time weather data using a public API and displays it with smooth **Lottie animations** based on current weather conditions.
 
-![Weather App Preview](./preview.png)
+![Weather App Preview](./src/asset/images/Preview.png)
 
 ---
 
