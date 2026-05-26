@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+# 🌤️ Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive weather application built with **React**, **Node.js**, and **Express** that fetches real-time weather data using a public API and displays it with smooth **Lottie animations** based on current weather conditions.
 
-## Available Scripts
+![Weather App Preview](./preview.png)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔍 **City Search** — Search weather data for any city worldwide
+- 🌡️ **Real-time Weather Data** — Displays temperature, humidity, wind speed, latitude & longitude
+- 🎞️ **Lottie Animations** — Dynamic weather animations that change based on cloud/weather conditions
+- ⚠️ **Input Validation** — Handles wrong or invalid city names with user-friendly error messages
+- ⏳ **Loading State** — Shows a loading indicator while fetching data from the API
+- 📱 **Responsive UI** — Clean and minimal design styled with Tailwind CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Layer | Technology |
+|---|---|
+| Frontend | React JS |
+| Backend | Node.js, Express |
+| Styling | Tailwind CSS |
+| Animations | Lottie Files |
+| Data Source | Public Weather API (OpenWeatherMap) |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+weather-app/
+├── client/                 # React frontend
+│   ├── src/
+│   │   ├── components/     # Weather card, search bar, animations
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── public/
+├── server/                 # Node.js + Express backend
+│   ├── index.js            # Express server & API routes
+│   └── .env                # API key (not committed)
+├── package.json
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js v18+
+- npm or yarn
+- OpenWeatherMap API key (free at [openweathermap.org](https://openweathermap.org/api))
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app
+   ```
 
-## Learn More
+2. **Install server dependencies**
+   ```bash
+   cd server
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Set up environment variables**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Create a `.env` file inside the `server/` folder:
+   ```env
+   API_KEY=your_openweathermap_api_key
+   PORT=5000
+   ```
 
-### Code Splitting
+4. **Install client dependencies**
+   ```bash
+   cd ../client
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Run the app**
 
-### Analyzing the Bundle Size
+   Start the backend server:
+   ```bash
+   cd server
+   node index.js
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   Start the React frontend:
+   ```bash
+   cd client
+   npm run dev
+   ```
 
-### Making a Progressive Web App
+6. Open your browser at `http://localhost:5173`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🌐 API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/weather?city=Chennai` | Fetches weather data for the given city |
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📸 Screenshots
 
-### `npm run build` fails to minify
+| Search | Weather Result | Invalid City |
+|---|---|---|
+| Search bar with city input | Temperature, humidity, wind speed with Lottie animation | Error message for wrong city |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🔒 Environment Variables
+
+| Variable | Description |
+|---|---|
+| `API_KEY` | Your OpenWeatherMap API key |
+| `PORT` | Port for the Express server (default: 5000) |
+
+> ⚠️ Never commit your `.env` file. It is already added to `.gitignore`.
+
+---
+
+## 🙋‍♂️ Author
+
+**Arun**
+- GitHub: [@your-username](https://github.com/Arunkumar1321)
+- LinkedIn: [your-linkedin](https://linkedin.com/in/arun-kumar-1325d)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
